@@ -1,14 +1,21 @@
-import Login from './pages/Login'
-import './Style/App.css';
-import LoginForm from './components/LoginForm';
+import React from "react";
+import "antd/dist/antd.css";
+import "./styles/main.css";
+import Login from "pages/Login";
+import DashBoard from "pages/DashBoard";
+import { Switch, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <div>
+    <div className="app">
+      <Switch>
+        <Route path="/" exact>
           <Login />
-          <LoginForm/>
-      </div>
+        </Route>
+        <Route path="/dashboard" exact>
+          <DashBoard />
+        </Route>
+      </Switch>
     </div>
   );
 }

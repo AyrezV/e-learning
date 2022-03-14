@@ -1,0 +1,95 @@
+.nav {
+    background: var(--color-primary-light-1);
+    color: white;
+    font-size: 3.2rem;
+    padding: 0.5em;
+    height: 100%;
+    position: relative;
+}
+.nav .logo {
+    margin: 2em 0;
+}
+.nav-main-item {
+    width: 8rem;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 1rem;
+}
+.nav-main-item[data-selected='true'] {
+    background: rgba(255, 255, 255, 0.3);
+}
+li.nav-main-item :hover {
+    background: rgba(255, 255, 255, 0.3);
+    width: 8rem;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 1rem;
+}
+/* ------------ ant menu ------------ */
+/* wrapper */
+.nav .ant-menu-wrapper {
+    display: none;
+    position: absolute;
+    inset: 0 auto 0 100%;
+}
+.nav:hover .ant-menu-wrapper {
+    display: block;
+}
+/* Menu */
+.nav-sub {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    font-size: 1.8rem;
+    background: white;
+    z-index: var(--layer-modal);
+}
+/* menu item */
+.nav-sub > .ant-menu-item,
+.nav-sub .ant-menu-submenu-title {
+    font-weight: bold;
+    padding: 1.5em !important;
+}
+.nav-sub > .ant-menu-item .anticon {
+    font-size: inherit;
+}
+/* sub menu */
+.nav-sub .ant-menu-sub {
+    background: inherit;
+}
+.nav-sub .ant-menu-submenu.ant-menu-submenu-active .ant-menu-submenu-title {
+    color: var(--color-primary-light-1);
+}
+/* menu item active */
+.nav-sub > .ant-menu-item::after,
+.nav-sub .ant-menu-submenu-title::after {
+    content: '';
+    position: absolute;
+    inset: 0 0 0 auto;
+    width: 0.7rem;
+    border-radius: 0.5rem;
+    background: var(--color-primary-light-1);
+    border-right: 0 !important;
+    transform: scale(0);
+    opacity: 0;
+}
+.nav-sub > .ant-menu-item[data-selected='true'] {
+    background: transparent;
+    color: var(--color-primary);
+}
+.nav-sub > .ant-menu-item[data-selected='true']::after,
+.nav-sub .ant-menu-submenu[data-selected='true'] .ant-menu-submenu-title::after {
+    transform: scale(1);
+    opacity: 1;
+}
+.ant-menu-item.ant-menu-item-active {
+    color: var(--color-primary) !important;
+}

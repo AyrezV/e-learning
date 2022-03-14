@@ -6,6 +6,11 @@
       "dom.iterable",
       "esnext"
     ],
+    "baseUrl": "./src",
+    "paths": {
+      "@store" : ["./stores"],
+      "@slice" : ["./stores/slices"],
+    },
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,

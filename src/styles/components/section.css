@@ -1,0 +1,28 @@
+.section {
+  min-height: 100vh;
+  padding: 1em 3em;
+}
+
+/* -------------- title ------------- */
+.section .header .header-title {
+  font-size: 4.8rem;
+}
+/* ----------- user panel ----------- */
+.section .header .user-panel {
+  width: fit-content;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.user-panel .avatar {
+  color: var(--color-primary-light-1);
+  text-align: center;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  width: 3.5rem;
+  aspect-ratio: 1/1;
+}
+.user-panel .username {
+  font-weight: 800;
+}

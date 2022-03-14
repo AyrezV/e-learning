@@ -1,0 +1,9 @@
+button.ant-btn {
+  background: var(--gradient-primary);
+  font-weight: bold;
+  border-radius: 0.5rem;
+  border: none;
+}
+button.ant-btn:hover {
+  background: var(--gradient-primary);
+}
