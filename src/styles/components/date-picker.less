@@ -1,0 +1,46 @@
+.ant-picker {
+  border-color: currentColor;
+  border-radius: 0.5rem;
+  &-suffix {
+    color: @color-primary;
+  }
+}
+/* ------------ dropdown ------------ */
+.ant-picker-dropdown {
+  font-size: 1.6rem;
+  .ant-picker-panel-container {
+    border-radius: 1rem;
+    padding: 1em 2em;
+  }
+  .ant-picker-panel {
+    border: 0;
+  }
+  .ant-picker-header {
+    border-bottom: 0;
+    font-family: @sub-font;
+    &-super-prev-btn,
+    &-super-next-btn {
+      display: none;
+    }
+    &-prev-btn,
+    &-next-btn {
+      color: @color-primary;
+    }
+    &-view {
+      font-weight: bold;
+    }
+  }
+  .ant-picker-body {
+    .ant-picker-content {
+      margin-inline: auto;
+    }
+    padding: 0;
+    thead th {
+      font-weight: bold;
+      color: @color-secondary;
+    }
+    .ant-picker-cell {
+      padding: 0.5rem 0;
+    }
+  }
+}

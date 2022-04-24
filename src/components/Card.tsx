@@ -13,10 +13,9 @@ const Card = ({ title, description, variant }: Props) => {
         <div className="circle"></div>
         <div className="circle"></div>
         <div className="circle"></div>
-        <div className="circle"></div>
       </div>
-      <div className="card-description">{description}</div>
       <div className="card-title">{title}</div>
+      <div className="card-description">{description}</div>
     </div>
   );
 };

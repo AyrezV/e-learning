@@ -1,12 +1,12 @@
 import {
     EyeOutlined,
+    LineChartOutlined,
+    TeamOutlined,
+    ProfileOutlined,
     ReadOutlined,
-    FileTextOutlined,
-    CalendarOutlined,
-    BellOutlined,
-    QuestionCircleOutlined,
+    SettingOutlined,
   } from "@ant-design/icons";
-
+  
 
 export const CATALOG = [
     {
@@ -16,60 +16,64 @@ export const CATALOG = [
         icon: EyeOutlined,
     },
     {
-        name: "my-class",
-        link: "/my-class",
-        text: "Lớp học của tôi",
+        name: "database",
+        link: "/database",
+        text: "Khai báo dữ liệu",
+        icon: LineChartOutlined,
+    },
+    {
+        name: "student",
+        link: "/student",
+        text: "Hồ sơ học sinh",
+        icon: TeamOutlined,
+        children: [
+            {
+                name: "all",
+                link: "/",
+                text: "Tất cả hồ sơ",
+            },
+            {
+                name: "transfer",
+                link: "/transfer",
+                text: "Tiếp nhận chuyển trường",
+            },
+            {
+                name: "reserve",
+                link: "/reserve",
+                text: "Bảo lưu",
+            },
+        ]
+    },
+    {
+        name: "lecture",
+        link: "/lecture",
+        text: "Hồ sơ giảng viên",
+        icon: ProfileOutlined,
+        children: [
+            {
+                name: "all",
+                link: "/",
+                text: "Tất cả hồ sơ",
+            },
+            {
+                name: "schedule",
+                link: "/schedule",
+                text: "Phân công giảng dạy",
+            },
+        ]
+
+    },
+    {
+        name: "examination",
+        link: "/examination",
+        text: "Thi cử",
         icon: ReadOutlined,
-        children: [
-            {
-                name: "all",
-                link: "/",
-                text: "Danh sách lớp học",
-            },
-            {
-                name: "join-class",
-                link: "/join-class",
-                text: "Tham gia vào lớp học",
-            },]
     },
     {
-        name: "test",
-        link: "/test",
-        text: "Bài kiểm tra",
-        icon: FileTextOutlined,
-        children: [
-            {
-                name: "all",
-                link: "/",
-                text: "Danh sách bài kiểm tra",
-            },
-            {
-                name: "transcript",
-                link: "/transcript",
-                text: "Bảng điểm",
-            },]
-
-    },
-    {
-        name: "test-schedule",
-        link: "/test-shedule",
-        text: "Lịch thi",
-        icon: CalendarOutlined,
-
-    },
-    {
-        name: "notification",
-        link: "/Notification",
-        text: "Thông báo",
-        icon: BellOutlined,
-
-    },
-
-    {
-        name: "help",
-        link: "/help",
-        text: "Trợ giúp",
-        icon: QuestionCircleOutlined,
+        name: "setting",
+        link: "/setting",
+        text: "Cài đặt hệ thống",
+        icon: SettingOutlined,
     },
 
 ]
